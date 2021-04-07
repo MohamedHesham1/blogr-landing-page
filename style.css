@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+}
+header {
+  background-image: linear-gradient(
+    110deg,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%) 80%
+  );
+  height: 500px;
+}
+.header-img {
+  /* learn layout css */
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+
+  margin: 0 auto;
+}
+.logo {
+  margin-right: 40px;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+.main-list {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  background-color: transparent;
+
+  font-size: 12px;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.drop-down {
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+}
+.drop-down-content {
+  display: none;
+  background-color: white;
+  position: absolute;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+.drop-down-content li {
+  list-style: none;
+  margin: 10px 10px;
+}
+.drop-down-content li a {
+  color: black;
+}
+.drop-down a {
+  color: white;
+}
+.drop-down-content a:hover {
+  font-weight: bold;
+}
+.drop-down:hover .drop-down-content {
+  display: block;
+}
+.btn-container {
+}
+.login-btn {
+  border: 0 solid transparent;
+  border-radius: 40%;
+  padding: 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.sign-up-btn {
+  border: 0 solid transparent;
+  border-radius: 35px;
+  padding: 5px 30px;
+  background-color: white;
+  color: pink;
+  cursor: pointer;
+}
