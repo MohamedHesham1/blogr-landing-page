@@ -11,17 +11,34 @@ header {
     hsl(13, 100%, 72%),
     hsl(353, 100%, 62%) 80%
   );
-  height: 500px;
+  height: 450px;
+  position: relative;
+}
+.arrow {
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 1px;
+  margin-left: 6px;
+}
+.down {
+  transform: rotate(45deg);
 }
 .header-img {
   /* learn layout css */
+  height: 500px;
+  width: auto;
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  right: 0;
 }
 nav {
   display: flex;
   justify-content: space-between;
   width: 80%;
-
   margin: 0 auto;
+  position: relative;
 }
 .logo {
   margin-right: 40px;
@@ -29,18 +46,21 @@ nav {
 .container {
   display: flex;
   align-items: center;
+  margin-top: 20px;
 }
 .main-list {
   display: flex;
   justify-content: flex-start;
   list-style: none;
   background-color: transparent;
-
   font-size: 12px;
   margin: 0;
 }
 a {
   text-decoration: none;
+  font-family: "Overpass", sans-serif;
+  font-weight: 300, 600;
+  font-size: 16px;
 }
 .drop-down {
   display: inline-block;
@@ -53,10 +73,12 @@ a {
   position: absolute;
   border: 1px solid transparent;
   border-radius: 3px;
+  width: 120px;
+  text-align: center;
 }
 .drop-down-content li {
   list-style: none;
-  margin: 10px 10px;
+  margin: 20px 10px;
 }
 .drop-down-content li a {
   color: black;
@@ -71,19 +93,123 @@ a {
   display: block;
 }
 .btn-container {
+  margin-top: 20px;
 }
 .login-btn {
   border: 0 solid transparent;
-  border-radius: 40%;
-  padding: 20px;
+  border-radius: 60%;
+  padding: 5px 30px;
   background-color: transparent;
   cursor: pointer;
+  color: white;
+  font-family: "Overpass", sans-serif;
+  font-weight: 300, 600;
+  font-size: 16px;
+}
+.sign-up-btn:hover {
+  background-color: rgba(230, 111, 131, 0.719);
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+}
+.login-btn:hover {
+  font-weight: bold;
+  transition: 0.5s;
 }
 .sign-up-btn {
   border: 0 solid transparent;
   border-radius: 35px;
   padding: 5px 30px;
   background-color: white;
-  color: pink;
+  color: rgb(168, 78, 93);
   cursor: pointer;
+  font-family: "Overpass", sans-serif;
+  font-weight: 300, 600;
+  font-size: 16px;
+  width: 125px;
+}
+.header-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-family: "Overpass", sans-serif;
+  margin-top: 90px;
+}
+.header-text h5 {
+  margin-top: 10px;
+}
+.btn-container-2 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+.start-free-btn {
+  border: 0 solid transparent;
+  border-radius: 50px;
+  padding: 10px 15px;
+  background-color: white;
+  color: rgb(168, 78, 93);
+  cursor: pointer;
+  font-family: "Overpass", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+.start-free-btn:hover {
+  background-color: rgb(247, 130, 150);
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+}
+.learn-more-btn {
+  border: 2px solid;
+  border-color: white;
+  border-radius: 50px;
+  padding: 10px 15px;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  font-family: "Overpass", sans-serif;
+  font-weight: 300, 600;
+  font-size: 16px;
+  width: 130px;
+}
+.learn-more-btn:hover {
+  background-color: white;
+  font-weight: bold;
+  color: rgb(235, 149, 163);
+  transition: 0.3s;
+}
+
+main {
+  margin-top: 50px;
+}
+.first-section {
+}
+.first-section h2 {
+  font-family: "Overpass", sans-serif;
+  color: rgb(53, 32, 109);
+  text-align: center;
+}
+.first-section h3 {
+  font-family: "Overpass", sans-serif;
+  color: rgb(53, 32, 109);
+  margin: 40px 10px 20px 180px;
+}
+.intro-txt,
+.robust-txt {
+  font-family: "Overpass", sans-serif;
+  font-size: 16px;
+  text-align: justify;
+  margin-left: 180px;
+  width: 500px;
+}
+
+.illustration-desktop-img {
+  float: right;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  margin: 5px 0 50px 100px;
 }
