@@ -6,13 +6,18 @@
 body {
 }
 header {
-  background-image: linear-gradient(
-    110deg,
-    hsl(13, 100%, 72%),
-    hsl(353, 100%, 62%) 80%
-  );
+  background-image: url(imgs/bg-pattern-intro.svg),
+    linear-gradient(110deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%) 80%);
+  background-size: 2000px 2000px, auto;
+  background-position: 10% 50%;
+  background-repeat: no-repeat, no-repeat;
   height: 450px;
   position: relative;
+  border-radius: 0 0 0 80px;
+}
+.header-img {
+  position: relative;
+  background-clip: content-box;
 }
 .arrow {
   border: solid white;
@@ -24,15 +29,7 @@ header {
 .down {
   transform: rotate(45deg);
 }
-.header-img {
-  /* learn layout css */
-  height: 500px;
-  width: auto;
-  position: absolute;
-  background-size: cover;
-  top: 0;
-  right: 0;
-}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -58,8 +55,8 @@ nav {
 }
 a {
   text-decoration: none;
-  font-family: "Overpass", sans-serif;
-  font-weight: 300, 600;
+  font-family: "ubuntu", sans-serif;
+  font-weight: 300;
   font-size: 16px;
 }
 .drop-down {
@@ -103,8 +100,9 @@ a {
   cursor: pointer;
   color: white;
   font-family: "Overpass", sans-serif;
-  font-weight: 300, 600;
+  font-weight: 300;
   font-size: 16px;
+  font-family: "ubuntu", sans-serif;
 }
 .sign-up-btn:hover {
   background-color: rgba(230, 111, 131, 0.719);
@@ -114,17 +112,17 @@ a {
 }
 .login-btn:hover {
   font-weight: bold;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 .sign-up-btn {
   border: 0 solid transparent;
   border-radius: 35px;
-  padding: 5px 30px;
+  padding: 10px 30px;
   background-color: white;
   color: rgb(168, 78, 93);
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
-  font-weight: 300, 600;
+  font-family: "ubuntu", sans-serif;
+  font-weight: bold;
   font-size: 16px;
   width: 125px;
 }
@@ -152,7 +150,7 @@ a {
   background-color: white;
   color: rgb(168, 78, 93);
   cursor: pointer;
-  font-family: "Overpass", sans-serif;
+  font-family: "ubuntu", sans-serif;
   font-weight: bold;
   font-size: 16px;
 }
@@ -170,8 +168,8 @@ a {
   background-color: transparent;
   cursor: pointer;
   color: white;
-  font-family: "Overpass", sans-serif;
-  font-weight: 300, 600;
+  font-family: "ubuntu", sans-serif;
+  font-weight: bold;
   font-size: 16px;
   width: 130px;
 }
@@ -186,16 +184,17 @@ main {
   margin-top: 50px;
 }
 .first-section {
+  overflow-x: hidden;
 }
 .first-section h2 {
   font-family: "Overpass", sans-serif;
-  color: rgb(53, 32, 109);
+  color: rgb(29, 52, 97);
   text-align: center;
 }
 .first-section h3 {
   font-family: "Overpass", sans-serif;
-  color: rgb(53, 32, 109);
-  margin: 40px 10px 20px 180px;
+  color: rgb(29, 52, 97);
+  margin: 70px 10px 20px 180px;
 }
 .intro-txt,
 .robust-txt {
@@ -205,11 +204,149 @@ main {
   margin-left: 180px;
   width: 500px;
 }
-
 .illustration-desktop-img {
   float: right;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  position: relative;
+  right: -170px;
+  top: -30px;
+}
+.second-section {
+  display: grid;
+  grid-template-columns: 500px 800px;
+  margin-top: 30px;
+  background: url(imgs/bg-pattern-circles.svg),
+    linear-gradient(110deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%) 80%);
+  background-repeat: no-repeat;
+  background-size: 700px 700px, cover;
+  background-position: 3% 95%;
+  height: 340px;
+  position: relative;
+  border-radius: 0 80px 0 80px;
+}
+.mobile-txt {
+  margin: 90px 200px;
+  height: 350px;
+}
+.mobile-img {
+  float: left;
   width: 500px;
   height: 500px;
+  position: relative;
+  top: -65px;
+  left: 100px;
+}
+.second-section h2 {
+  font-family: "Overpass", sans-serif;
+  color: white;
+  text-align: left;
+  margin-bottom: 25px;
+}
+.second-section p {
+  font-family: "Overpass", sans-serif;
+  font-size: 16px;
+  text-align: justify;
+  color: white;
+}
+.third-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 150px;
+  background-color: white;
+  height: 500px;
+}
+.laptop-img {
+  float: left;
+  width: 600px;
+  position: relative;
+  left: -169px;
+}
+.free-open-txt {
+  margin-top: 70px;
+  width: 500px;
+}
+.free-open-txt h2,
+p {
+  font-family: "Overpass", sans-serif;
+  color: rgb(29, 52, 97);
+  text-align: left;
+}
+.free-open-txt h2 {
+  margin-bottom: 25px;
+}
+.free-open-txt p {
+  margin-bottom: 70px;
+}
+footer {
+  background-color: hsl(240, 10%, 16%);
+  height: 300px;
+  margin-top: 60px;
+  border-radius: 0 80px 0 0;
+}
+.logo-footer {
+  margin: 50px 100px;
+}
+.footer-list {
+  font-family: "Overpass", sans-serif;
   display: flex;
-  margin: 5px 0 50px 100px;
+  justify-content: space-between;
+  position: relative;
+  left: 400px;
+  top: -100px;
+  width: 700px;
+}
+.product-list {
+  list-style: none;
+}
+.product-list a {
+  color: hsl(240, 2%, 79%);
+}
+.product-list li {
+  margin-bottom: 10px;
+}
+.product-list a:hover {
+  text-decoration: underline;
+}
+.product {
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.company-list {
+  list-style: none;
+}
+.company-list a {
+  color: hsl(240, 2%, 79%);
+}
+.company-list li {
+  margin-bottom: 10px;
+}
+.company-list a:hover {
+  text-decoration: underline;
+}
+.company {
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.Connect-list {
+  list-style: none;
+}
+.Connect-list a {
+  color: hsl(240, 2%, 79%);
+}
+.Connect-list li {
+  margin-bottom: 10px;
+}
+.Connect-list a:hover {
+  text-decoration: underline;
+}
+.Connect {
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+  margin-bottom: 40px;
 }
